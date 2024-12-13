@@ -40,6 +40,6 @@ while 0 <= r < num_rows and 0 <= c < num_columns:
         if c > 0 and matrix[r][c-1] == '#':
             direction = 'up'
     else:
-        break  # No valid move
+        break
 
 print(len(visited))

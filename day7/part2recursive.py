@@ -1,13 +1,11 @@
 def can_reach_target(numbers, target, i, current_value):
-    # If we've placed all operators and reached the end:
+
     if i == len(numbers):
         return current_value == target
 
-    # Try adding the next number
     if can_reach_target(numbers, target, i + 1, current_value + numbers[i]):
         return True
 
-    # Try multiplying the next number
     if can_reach_target(numbers, target, i + 1, current_value * numbers[i]):
         return True
 
@@ -23,11 +21,9 @@ def equals_test_value(arr, test_value):
 
     c = int(str(lst[0]) + str(lst[1]))
 
-    # If only two numbers, just check directly:
     if len(lst) == 2:
         return (lst[0] + lst[1] == test_val) or (lst[0] * lst[1] == test_val) or c == test_val
 
-    # Recursively try all combinations starting with the first number as current_value
     return can_reach_target(lst, test_val, 1, lst[0])
 
 

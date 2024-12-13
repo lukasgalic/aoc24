@@ -16,7 +16,7 @@ for char in line:
 
 
 woo = []
-# Iterate through the list backwards
+
 k = 0
 for i in range(len(lst) - 1, -1, -1):
     if k >= i-1:

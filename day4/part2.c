@@ -14,12 +14,10 @@ int main(void)
     int cols = 0;
     FILE *file = fopen("input.txt", "r");
 
-    // Poppulate the neighbors array with indices
     Neighbor neighbors[2] = {
         {-1, -1},
         {-1, 1}};
 
-    // Calculate rows and cols from input file
     int first_row_done = 0;
     while ((c = fgetc(file)) != EOF)
     {
@@ -37,7 +35,6 @@ int main(void)
 
     char matrix[rows][cols];
 
-    // Populate the matrix
     int i = 0;
     int j = 0;
     while ((c = fgetc(file)) != EOF)

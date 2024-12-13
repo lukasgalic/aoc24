@@ -14,7 +14,6 @@ def process_sequence(arr):
             current = arr[i]
             index += 1
         else:
-            # Invalid sequence, reset the state
             return False
 
     return index == len(arr)
